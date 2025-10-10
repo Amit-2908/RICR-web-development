@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.Maindiv{
+    display:flex;
+
+}
+#sidebar{
+    height: 900px;
+    width: 300px;
+    background-color: rgb(80, 90, 100);
+}
+#content{
+    height: 900px;
+    width: 1000px;
+    background-color: #ece5e5;
+}
+.head{
+    display: flex;
+    height: 40px;
+    background-color: rgb(10, 173, 227,0.9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+#head{
+    display: flex;
+    height: 40px;
+    background-color: rgb(10, 173, 227, 0.9);
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px;
+    color: white;
+}
