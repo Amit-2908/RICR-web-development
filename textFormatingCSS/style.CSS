@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1{
+     font-family: "Montserrat", sans-serif;
+      text-shadow: 2px 2px  5px burlywood;
+      color: brown;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    /* font-variant: small-caps; */
+    color: brown;
+    text-shadow: ;
+}
+#div1{
+    border: 2px solid rgb(125, 219, 38);
+    width: 500px;
+}
+#div2{
+    border: 2px solid red;
+    width: 500px;
+} 
+body{
+    background-color: cadetblue;
+}
