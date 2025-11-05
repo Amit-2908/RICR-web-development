@@ -1,0 +1,49 @@
+#main{
+    border: 1px solid black;
+    width: 700px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: rgb(15, 66, 235);
+   
+}
+
+
+.login{
+    text-align: center;
+    border: 1px solid black;
+    width:max-content;
+    /* margin: 14rem; */
+    margin: 200px auto 150px;
+    padding: 20px;
+    background-color:#ffffffe1;
+    border-radius: 5%;
+    .Form{
+        input{
+            background-color: transparent ;
+        }
+    }
+    
+      
+}
+input{
+    border: 1px solid rgb(9, 17, 17);
+    
+    
+}
+input:focus-within{
+    outline: none;
+}
+  button{
+    background-color: rgb(39, 24, 243) ;
+    border: 1px solid rgb(32, 17, 202);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 1px rgb(6, 2, 3);
+    color: #ffffffe1;
+   
+  }
+  a{
+    text-decoration: none;
+  }
+  /* a:hover{
+    text-decoration: underline;
+} */
