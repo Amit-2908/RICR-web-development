@@ -1,0 +1,16 @@
+#d1,#d2{
+    border: 15px solid black;
+    width: 400px;
+    height: 300px;
+    display: inline-block;
+    background:green;
+    color: rgb(187, 205, 205);
+    padding: 20px;
+    font-size:x-large;
+}
+#san{
+    border: 1px solid blue;
+    width: 300px;
+    height: 300px;
+    
+}
