@@ -11,14 +11,14 @@
 .leftDiv {
 
     width: 275px;
-    height: 950px;
+    height: 1450px;
     background-color: rgb(13, 53, 79);
     color: aliceblue;
     /* display: ; */
     
     /* justify-content: center; */
     
- #logo{
+ .logo{
     color: aqua;
  }
     img{
@@ -34,24 +34,20 @@
         padding: 10px 20px 30px 30px;
         height: 30px;
         font-size: x-large;
+    
         span{
             color: gold;
             
         }
         border-bottom: 2px solid black;
-       
- 
- 
-
     }
-        
     
     
 }
 .rightDiv{
     
     width: 500px;
-    height: 950px;
+    height: 1450px;
     background-color: rgb(212, 215, 216);
     color: rgb(7, 12, 16);
     
@@ -59,14 +55,19 @@
   
 }
 .list{
-    display: grid;
+    display:grid;
     list-style-type: none; 
     gap: 5px;
     color: rgb(128, 129, 129);
+    a{
+     text-decoration: none;
+      color: rgb(128, 129, 129);
+    }
     .classSpan{
     font-size: large;
     color: aliceblue;
     }   
+    
 }
 #s,#s1,#s2,#s3{
     font-size: 15px;
@@ -79,17 +80,34 @@ p{
         margin-left: 10px;
         text-size-adjust: calc(12px);
 }
-/* #d1{
-    border: 1px solid red;
-    width: 498px;
-    height: 649px;
-    display: flex;
-}         
-*/
+.d2{
+    width: 500px;
+    display: flex;    
+    flex-wrap: wrap;
+    h3{
+        width: 240px;
+        margin-left:auto;
+        color: rgba(31, 77, 77, 0.689);
+    }
+    p{
+        width: 300px; 
+        flex: 4 200px;
+        padding-left:1px;
+              
+    }
+    .border{
+        border-left: 2px solid whitesmoke;
+    }
+   
+   
+    
+}
 table{
     margin-left: 10px;
     h3{
-        color:rgba(0, 0, 255, 0.694);
+        color:rgba(0,0,255,0.694);
     }
 }
- 
+  h1{
+        color: rgb(13, 53, 79);
+    }
