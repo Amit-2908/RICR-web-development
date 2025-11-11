@@ -1,0 +1,70 @@
+
+h1{
+    width: 200px;
+    border: 1px solid black;
+    margin-left: 0px;
+}
+h1:hover{
+    /* margin-left:  200px; 
+     transition:  5s; */
+    width: 400px;
+    /* padding: 10px; */
+    transition: width 5s;
+}
+#d1{
+    width: 400px;
+    height: 50px;
+    border: 1px solid black;
+   
+}
+#d2{
+   width: 0%;
+   height:50px ;
+   background-color: rgb(22, 209, 116);
+
+
+}
+#d1:hover{
+
+ #d2{
+    width:100%;
+    background-color: #cb1818;
+    background-color: blueviolet;
+    transition: width 5s  ease-out ,background-color  5s ease-out, bg;
+ }
+}
+
+
+
+
+#outer1{
+    width: 400px;
+    height: 50px;
+    border: 1px solid black;
+
+    #inner1{
+        height: 50px;
+    }
+}
+
+#outer1:hover{
+    #inner1{
+        animation: myAnimation 5s linear ;
+    }
+}
+
+@keyframes myAnimation {
+    0%{
+        width: 0%;
+        background-color: red;
+
+    }
+    50%{
+        width: 50%;
+        background-color: #fff;
+    }
+    100%{
+        width: 100%;
+        background-color: chartreuse;
+    }
+}
