@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+
+
 /* body{background-color: #caac25;} */
 #mainDiv{
     
-    
+
     height: 70px;
     /* border: 1px solid black; */
 

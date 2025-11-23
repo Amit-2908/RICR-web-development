@@ -1,0 +1,15 @@
+.anchor{
+    font-size: x-large;
+}
+#middleContainer{
+    display: flex;
+    justify-content: center;
+}
+.middleContainer{
+    background-color: rgba(214, 242, 254, .5);;
+    width: 900px;
+    height: 900px;
+    margin-top: 60px;
+    border-radius: 2%;
+
+}
