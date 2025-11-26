@@ -1,0 +1,42 @@
+#bulb{
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: fit-content;
+}
+button{
+    margin: 10px;
+}
+#smartBulb{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.on{
+    background-color:yellow;
+}
+#mainBox{
+    width: 1000px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    #innerBox{
+        margin-top: 20px;
+    width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .colorMenu{
+            margin-top: 50px;
+    }
+}

@@ -1,0 +1,20 @@
+#mainBox{
+    width: 1000px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    #innerBox{
+        margin-top: 20px;
+    width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .colorMenu{
+            margin-top: 50px;
+    }
+}
