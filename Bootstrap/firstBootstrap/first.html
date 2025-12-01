@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="maindiv">
+      <nav class="">
+        <div
+          class="bg-primary fs-2 fw-medium text-white  w-100 d-flex justify-content-center p-3 position"
+        >
+          Dice Game
+        </div>
+      </nav>
+      <div class="d-flex justify-content-center mt-4">
+        <div
+          class=" w-25 m-5 d-flex flex-column align-items-center rounded  shadow"
+        >
+          <h2 class="text-dark-subtle mt-2 fw-normal">Player 1</h2>
+          <img
+            src="./image/6.png"
+            alt="dice image"
+            width="80px"
+            class="border rounded mt-2 mb-3"
+            id="p1dice"
+          />
+          <button
+            class="btn btn-primary border none rounded text-white w-25 mb-3"
+            id="player1"
+
+            disabled
+            onclick="p1play()"
+          >
+            Roll Dice
+          </button>
+        </div>
+        <div
+          class=" w-25 m-5 d-flex flex-column align-items-center rounded shadow"
+        >
+          <h2 class="text-dark-subtle mt-2 fw-normal">Player 2</h2>
+          <img
+            src="./image/6.png"
+            alt="dice image"
+            width="80px"
+            class="border rounded mt-2 mb-3"
+            id="p2dice"
+          />
+          <button
+            class=" btn btn-primary border none rounded text-white w-25 mb-3"
+            id="player2"
+            disabled
+             onclick="p2play()"
+          >
+            Roll Dice
+          </button>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <h1 class="fs-3 fw-bold">Score Broard</h1>
+      </div>
+      <div class=" ">
+        <div class="d-flex justify-content-evenly h1  mt-2 ">
+          <div class="">
+            <h3 class="fs-3 fw-normal">Player 1</h3>
+            <label for="p1Score" id="p1sc" class="ms-5 fw-normal">0</label>
+          </div>
+          <div class=" ">
+            <h3 class="fs-3 fw-normal">Player 2</h3>
+            <label for="p2Score " id="p2sc" class="ms-5 fw-normal " >0</label>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-2 gap-5">
+        <button
+          class="btn btn-success  rounded-1 text-white  p-2 shadow dark "
+          id="btnStart"
+          onclick="start()"
+        >
+          Start Game
+        </button>
+        <button
+          class="btn btn-danger rounded-1 text-white p-2 "
+          id="btnRestart"
+          onclick="restart()"
+          disabled
+        >
+          Restart Game
+        </button>
+      </div>
+     
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
