@@ -1,0 +1,27 @@
+.dark{
+    background-color: black;
+    color: white;
+}
+.light{
+    background-color: white;
+    color:black;
+}
+.modeDark{
+    border-radius: 50px;  
+    background-color: rgb(254, 253, 253);
+    color: rgb(0, 0, 0);
+}
+.modeLight{
+    
+    border-radius: 50px;
+    background-color: rgb(254, 253, 253);
+    color: rgb(0, 0, 0);
+}
+#Div{
+    display: flex;
+    justify-content: center;
+}
+#btn{
+    position: absolute;
+    top: 15px;
+}
