@@ -1,4 +1,4 @@
-async function getWeather() {
+async function getWeather(){
   const city = document.getElementById("city").value.trim();
   const { lat, lon } = await getGeoLoc(city);
   console.log(lat, lon);
