@@ -10,7 +10,7 @@ import { PiTrademarkRegisteredFill } from "react-icons/pi";
 export const Header = () => {
   return (
     <>
-      <div className=" flex justify-between  bg-amber-300 p-3 position ">
+      <div className=" flex justify-between  bg-amber-300 p-3 sticky top-0 ">
         <h1 className="ms-2.5">Makeup Store</h1>
         <div className=" flex gap-4 me-2.5">
           <Link
@@ -53,11 +53,12 @@ export const Header = () => {
           </Link>
 
           <Link
-            to={"/register"}
+            to={"/signup"}
             className="flex items-center gap-0.5 border bg-amber-600 rounded hover:shadow p-1 hover:text-amber-50"
           >
           
-            < PiTrademarkRegisteredFill />            Register
+            < PiTrademarkRegisteredFill />
+            SignUp
           </Link>
         </div>
       </div>

@@ -77,6 +77,23 @@ const Contact = () => {
                 onChange={handleChange}
               />
             </div>
+
+            <div className=" ">
+              <label htmlFor="religion">Religious:</label>
+
+              <select
+                name="religion"
+                id="religion"
+                value={contactData.religion}
+                onChange={handleChange}
+              >
+                <option value="">..Select..</option>
+                <option value="Sanatani">Sanatani</option>
+                <option value="Hindusm">Hindusm</option>
+                <option value="Buddishm">Buddishm</option>
+              </select>
+            </div>
+
             <div>
               <label htmlFor="message">Message:</label>
               <textarea

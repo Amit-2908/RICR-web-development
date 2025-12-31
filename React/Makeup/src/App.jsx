@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";        
 import Product from "./pages/Product";
 import Login from "./pages/Login";
-import { Register } from "./pages/Register";
+import { SignUp } from "./pages/SignUp";
 
 
 
@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/product" element={<Product/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/login"  element={<Login/>}/>
-          <Route path="/register" element={<Register/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
           </Routes>
       </BrowserRouter>
     </>

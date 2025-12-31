@@ -1,12 +1,14 @@
 import React,{ useState} from 'react';
 
-export const Register = () => {
+export const SignUp = () => {
   const [contactData, setContactData] = useState({
     fullName: "",
     email: "",
     phone: "",
     city: "",
     password: "",
+    confirmEmail: "",
+    confirmPassword: "",
     
   });
 
@@ -22,7 +24,8 @@ export const Register = () => {
       email: "",
       phone: "",
       city: "",
-      
+      confirmEmail: "",
+      confirmPassword: "",
     });
   };
   const handleSubmit = async (e) => {
@@ -70,6 +73,19 @@ export const Register = () => {
             </div>
 
             <div className="grid grid-cols-2 ">
+              <label htmlFor="confirmEmail">Confirm Email:</label>
+              <input
+                type="email"
+                name="confirmEmail"
+                id="confirmEmail"
+                placeholder="Reenter your Email"
+                className="  outline-none border-b"
+                value={contactData.confirmEmail}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="grid grid-cols-2 ">
               <label htmlFor="password">Password:</label>
               <input
                 type="password"
@@ -78,6 +94,19 @@ export const Register = () => {
                 placeholder="Enter your password"
                 className="  outline-none border-b"
                 value={contactData.password}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="grid grid-cols-2 ">
+              <label htmlFor="confirmPassword">Confirm Password:</label>
+              <input
+                type="confirmPassword"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder="Re Enter your password"
+                className="  outline-none border-b"
+                value={contactData.confirmPassword}
                 onChange={handleChange}
               />
             </div>
@@ -120,4 +149,4 @@ export const Register = () => {
     </>
   );
 };
-export default Register;
+export default SignUp;
