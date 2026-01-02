@@ -1,23 +1,31 @@
-
 import React, { useState } from "react";
-export const Registeration = () => {
 
-    const [registerData, setRegisterData] = useState({
-        fullName: "",
-        emailAddress:"",
-        dateOfBirth:"",
-        qualification: "",
-        grade: "",
-        preferredCourse: "",
-        address: "",
-        city: "",
-        pinCode: "",
-        guardianName: "",
-        guardianContact: "",
-    })
+export const Registeration = () => {
+  const [registerData, setRegisterData] = useState({
+    fullName: "",
+    emailAddress: "",
+    dateOfBirth: "",
+    qualification: "",
+    grade: "",
+    preferredCourse: "",
+    address: "",
+    city: "",
+    pinCode: "",
+    guardianName: "",
+    guardianContact: "",
+  });
+
+//   const handleChange = (e) => {
+//     const {name ,value} = e.target;
+//   }
+
+
+
   return (
-    <>
-      <div className="  p-1 m-5 flex justify-center">
+     <>
+     {/* <Toaster  position="top-center"  reverseOrder={false} /> */}
+     
+      <div className="  p-1 m-5 flex justify-center ">
         <form className=" borde rounded shadow-2xl p-3.5 ">
           <fieldset className=" border-2 border-emerald-500  shadow-2xl w-4xl rounded mb-1.5">
             <legend className="ms-10 text-blue-800">
@@ -32,9 +40,9 @@ export const Registeration = () => {
                 id="fullName"
                 value={registerData.fullName}
                 placeholder="Enter your name"
-                className=" outline-green-400 -ms-1 p-1"
+                className=" outline-green-400 -ms-1 p-1 "
               />
-              
+
               <label htmlFor="emailAddress">Email Address:</label>
               <input
                 type="email"
