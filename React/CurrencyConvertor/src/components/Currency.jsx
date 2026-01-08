@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import CountryData from "../assets/CountaryData.json";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { AiOutlineSwap } from "react-icons/ai";
+
 
 const Currency = () => {
   const [from, setFrom] = useState("");
@@ -31,8 +33,8 @@ const Currency = () => {
     <>
       <div className="bg-amber-50 h-screen p-5">
         <div className="w-3xl bg-white rounded shadow border p-3 mx-auto space-y-5">
-          <div className="grid grid-cols-2 gap-5">
-            <div className="flex gap-3 border rounded px-3">
+          <div className=" relative grid grid-cols-2 gap-10">
+            <div className="flex gap-2 border rounded px-3">
               {from && (
                 <img
                   src={`https://flagsapi.com/${from.split(" ")[1]}/flat/48.png`}
@@ -82,6 +84,12 @@ const Currency = () => {
               </select>
             </div>
           </div>
+            <div className=" absolute left-1/2 -translate-x-[50%] top-3">
+            <button className=" text-2xl hover:scale-150 hover:duration-300 scale-100 duration-300 hover:text-green-500">
+               <AiOutlineSwap />
+            </button>
+            </div>      
+
           <div className="flex gap-3 items-center">
             <label htmlFor="fromAmt">Amount</label>
             <input
