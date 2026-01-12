@@ -1,16 +1,18 @@
 {
-  "name": "firstbackend",
+  "name": "server",
   "version": "1.0.0",
-  "description": "kuch bhi",
-  "license": "ISC",
-  "author": "Amit Prajapati",
-  "type": "module",
+  "description": "This is Ca",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
+  "keywords": [],
+  "author": " Amit",
+  "license": "ISC",
+  "type": "module",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.1.2"
