@@ -7,158 +7,48 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const UserSideBar = ({ active, setActive, open, setOpen }) => {
+  const menuItems = [
+    { key: "overview", title: "Overview", icon: <TbChartTreemap /> },
+    { key: "profile", title: "Profile", icon: <ImProfile /> },
+    { key: "orders", title: "Orders", icon: <TiShoppingCart /> },
+    { key: "transaction", title: "Transaction", icon: <TbTransactionRupee /> },
+    { key: "helpdesk", title: "Help Desk", icon: <RiCustomerService2Fill /> },
+  ];
+
   return (
     <>
-      <div className="p-3">
-        {open ? (
-          <div className="text-xl font-bold flex gap-3 items-center">
-            <button onClick={() => setOpen(!open)}>
-              <RxHamburgerMenu className="text-3xl" />
-            </button>
-            User Dashboard
-          </div>
-        ) : (
-          <div className="text-3xl text-center">
-            <button onClick={() => setOpen(!open)}>
-              <RxHamburgerMenu />
-            </button>
-            
-          </div>
-        )}
+      <div className="p-2 ">
+        <div className=" h-10 text-xl font-bold flex gap-3 items-center mb-3">
+          <button className="hover:scale-105" onClick={() => setOpen(!open)}>
+            <RxHamburgerMenu className="text-3xl" />
+          </button>
+          {""}
+          {open && (
+            <span className="overflow-hidden text-nowrap">User Dashboard</span>
+          )}
+        </div>
+
         <hr />
-        {open ? (
-          <div className="grid gap-3 p-6">
-            <button
-              className={`flex gap-3 items-center p-3 rounded-xl 
-                ${
-                  active === "overview"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("overview")}
-            >
-              {""}
-              <TbChartTreemap /> Overview
-            </button>
-            <button
-              className={`flex gap-3 items-center p-3 rounded-xl 
-                ${
-                  active === "profile"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("profile")}
-            >
-              {""}
-              <ImProfile /> Profile
-            </button>
 
+        <div className="py-6 space-y-5 w-full">
+          {menuItems.map((item, idex) => (
             <button
-              className={`flex gap-3 items-center p-3 rounded-xl 
+              className={` flex gap-3 items-center text-lg ps-2 rounded-xl h-10 w-full text-nowrap overflow-hidden duration-300
                 ${
-                  active === "orders"
+                  active === item.key
                     ? "bg-(--color-secondary) text-white"
                     : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("orders")}
+                }
+              `}
+              onClick={() => setActive(item.key)}
+              key={idex}
             >
               {""}
-              <TiShoppingCart /> Orders
+              {item.icon}
+              {open && item.title}
             </button>
-
-            <button
-              className={`flex gap-3 items-center p-3 rounded-xl 
-                ${
-                  active === "transactions"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("transaction")}
-            >
-              {""}
-              <TbTransactionRupee /> Transactions
-            </button>
-
-            <button
-              className={`flex gap-3 items-center p-3  rounded-xl 
-                ${
-                  active === "helpdesk"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("helpdesk")}
-            >
-              {""}
-              <RiCustomerService2Fill /> Help Desk
-            </button>
-          </div>
-        ) : (
-          <div className="py-2 text-2xl gap-1 flex flex-col">
-            <button
-              className={`flex gap-3 items-center p-3  rounded-xl 
-                ${
-                  active === "overview"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("overview")}
-            >
-              {""}
-              <TbChartTreemap />
-            </button>
-
-            <button
-              className={`flex gap-3 items-center  p-3 rounded-xl 
-                ${
-                  active === "profile"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("profile")}
-            >
-              {""}
-              <ImProfile />
-            </button>
-
-            <button
-              className={`flex gap-3 items-center p-3  rounded-xl 
-                ${
-                  active === "orders"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("orders")}
-            >
-              {""}
-              <TiShoppingCart />
-            </button>
-
-            <button
-              className={`flex gap-3 items-center p-3  rounded-xl 
-                ${
-                  active === "transactions"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("transaction")}
-            >
-              {""}
-              <TbTransactionRupee />
-            </button>
-            <button
-              className={`flex gap-3 items-center p-3  rounded-xl 
-                ${
-                  active === "helpdesk"
-                    ? "bg-(--color-secondary) text-white"
-                    : "hover:bg-gray-100/70"
-                }`}
-              onClick={() => setActive("helpdesk")}
-            >
-              {""}
-              <RiCustomerService2Fill />
-            </button>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </>
   );

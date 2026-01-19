@@ -11,12 +11,12 @@ const UserDashboard = () => {
   const [open,setOpen] = useState(true);
   return (
     <>
-    <div className='w-full flex h-[90vh]'>
-      <div className={`bg-(--color-background)  ${open?"w-[20%]" :"w-[5%]"}`}>
+    <div className='w-full flex h-[91vh]'>
+      <div className={`bg-(--color-background) duration-300 ${open?"w-12/60" :"w-2/60"}`}>
         <UserSideBar active={active} setActive= {setActive}
         open={open} setOpen ={setOpen}/>
       </div>
-      <div className='border border-amber-700 w-8/10'>
+      <div className={`${open ? "w-48/60":"w-58/60"} duration-300`}>
       {active === 'overview' && <UserOverview/>}
       {active === 'profile' && <UserProfile/>}
       {active === 'orders' && <UserOrders/>}
