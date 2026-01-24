@@ -9,7 +9,7 @@ const Header = () => {
     
   return (
     <>
-      <div className="bg-(--color-primary) px-4 py-2 flex justify-between items-center sticky top-0 z-50">
+      <div className="bg-(--color-primary) px-4 py-2 flex justify-between items-center sticky top-0 z-99">
         <Link to={"/"}>
           <img
             src={tranparentLogo}
@@ -39,7 +39,7 @@ const Header = () => {
         </div>
         <div className=" flex gap-4">
            {isLogin ? (
-            <span className="text-red-500">{user.fullName}</span>
+            <div className="text-red-500 cursor-pointer" onClick={()=>navigate("/user-dashboard")} >{user.fullName}</div>
           ) : (
             <>
               <button
