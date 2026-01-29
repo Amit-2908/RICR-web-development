@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
-dotenv.config();
+
 
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import cloudinary from "./src/config/cloudinary.js";
 import cookieParser from "cookie-parser";
 import connectDB from "./src/config/db.js";
 import AuthRouter from "./src/routers/authRouterf.js";
@@ -28,15 +28,23 @@ app.get("/", (req, res) => {
 
 app.use((err, req, res, next) => {
   const ErrorMessage = err.message || "Internal Server Error";
-  const StausCode = err.statusCode || 500;
-  console.log("Error Found ",{ErrorMessage,StausCode} );
-  
+  const StatusCode = err.statusCode || 500;
+  console.log("Error Found ", { ErrorMessage, StatusCode });
 
-  res.status(StausCode).json({ message: ErrorMessage});
+  res.status(StatusCode).json({ message: ErrorMessage });
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+
+app.listen(port, async () => {
   console.log("Server Started  at port:", port);
   connectDB();
+  try {
+    const res = await cloudinary.api.ping();
+    console.log("Cloudinary API is Working:",res);
+    
+    
+  } catch (error) {
+    console.error("Error Connection Cloudinary API:",error);
+  }
 });
