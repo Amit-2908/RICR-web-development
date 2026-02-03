@@ -10,8 +10,7 @@ import ResetPasswordModal from "./Modals/ResetPasswordModal.jsx";
 const UserProfile = () => {
   const { user, setUser } = useAuth();
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
-  const [isResetPasswordModalOpen, setIsResetPasswordModalOpen] =
-    useState(false);
+  const [isResetPasswordModalOpen, setIsResetPasswordModalOpen] = useState(false);
   const [preview, setPreview] = useState("");
 
   const changePhoto = async (photo) => {
