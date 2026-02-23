@@ -1,13 +1,12 @@
 import express from "express";
 import {
+  UserRegister,
   UserLogin,
   UserLogout,
-  UserRegister,
   UserGenOTP,
   UserVerifyOtp,
-  
-  UserForgetPassword,
-} from "../controllers/authcontroller.js";
+  UserForgetPassword
+} from "../controllers/authController.js";
 import { OtpProtect } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
@@ -18,6 +17,6 @@ router.get("/logout", UserLogout);
 
 router.post("/genOtp", UserGenOTP);
 router.post("/verifyOtp", UserVerifyOtp);
-router.post("/forgetPasword", OtpProtect, UserForgetPassword);
+router.post("/forgetPasword",OtpProtect,UserForgetPassword)
 
 export default router;

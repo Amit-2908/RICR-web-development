@@ -4,11 +4,11 @@ export const genToken = (user, res) => {
   try {
     const payload = {
       id: user._id,
-      role: user.role || "admin",
+      role: user.role,
     };
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
       expiresIn: "1d",
-    }); //1h
+    });
 
     console.log(token);
 
@@ -16,13 +16,12 @@ export const genToken = (user, res) => {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
       secure: false,
-      SameSite: "lax",
+      sameSite: "lax",
     });
   } catch (error) {
     throw error;
   }
 };
-
 export const genOtpToken = (user, res) => {
   try {
     const payload = {
